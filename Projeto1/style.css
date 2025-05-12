@@ -1,0 +1,14 @@
+    .image-baixa-iluminacao {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ajuste os valores conforme desejado */
+      width: 100%; /* Preenche a largura da tela */
+      height: 100%;
+      opacity: 0.7;
+    }
+   
+body {
+  background-image: url(plano-de-fundo-para-chamadas-de-zoom-com-estante.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}

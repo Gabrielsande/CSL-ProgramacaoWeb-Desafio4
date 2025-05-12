@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exemplo</title>
+</head>
+
+<body>
+
+    <div style="transition: 5s; position: relative; width: 100%; height: 100vh; background-image: url('plano-de-fundo-para-chamadas-de-zoom-com-estante.jpg'); background-size: cover; background-position: center;">
+        <label style="position: absolute; top: 10px; left: 10px; display: flex; align-items: center; cursor: pointer;">
+            <input type="checkbox" id="toggleSwitch" style="display: none;">
+            <span
+                style="width: 40px; height: 20px; background-color: #ccc; border-radius: 10px; position: relative; transition: background-color 0.3s;">
+                <span
+                    style="width: 18px; height: 18px; background-color: #fff; border-radius: 50%; position: absolute; top: 1px; left: 1px; transition: transform 0.3s;"></span>
+            </span>
+        </label></span>
+        <img src="lampadaLigada.png" id="lampada"
+            style="position: absolute; top: 0; left: 50%; transform: translate(-50%, 0); width: 100px;" alt="Lâmpada">
+    </div>
+    <button id="toggleButton"
+        style="position: absolute; top: 10px; left: 10px; background-color: #333; color: #fff; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Desligar</button>
+    <style>
+        .dark-background {
+            filter: brightness(25%);
+        }
+    </style>
+    <script>
+        const background = document.querySelector('div');
+        const button = document.getElementById('toggleButton');
+
+        button.addEventListener('click', () => {
+            background.classList.toggle('dark-background');
+            button.textContent = background.classList.contains('dark-background') ? 'Ligar' : 'Desligar';
+        });
+    </script>
+
+
+
+    <script>
+        // Para usar JS, você pode alterar a classe dinamicamente
+        const img = document.querySelector('img');
+        let lightOnCount = 0;
+
+        function toggleIluminacao() {
+            img.src = img.src.includes('lampadaLigada.png') ? 'lampadaDesligada.png' : 'lampadaLigada.png';
+            if (img.src.includes('lampadaLigada.png')) {
+                lightOnCount++;
+                console.log(`A luz foi acesa ${lightOnCount} vezes.`);
+            }
+        }
+
+        const countButton = document.createElement('button');
+        countButton.textContent = 'Ver Contagem';
+        countButton.style.position = 'absolute';
+        countButton.style.top = '50px';
+        countButton.style.left = '10px';
+        countButton.style.backgroundColor = '#333';
+        countButton.style.color = '#fff';
+        countButton.style.border = 'none';
+        countButton.style.padding = '10px';
+        countButton.style.borderRadius = '5px';
+        countButton.style.cursor = 'pointer';
+
+        countButton.addEventListener('click', () => {
+            alert(`A luz foi acesa ${lightOnCount} vezes.`);
+        });
+
+        document.body.appendChild(countButton);
+
+
+    </script>
+
+</body>
+
+</html>
