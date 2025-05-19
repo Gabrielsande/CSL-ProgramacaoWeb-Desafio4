@@ -35,7 +35,6 @@ Este projeto simula um interruptor digital que liga e desliga uma lâmpada virtu
 ### Luz acesa:
 
 ![Luz acessa](imagens/lampadaLigada.png)
-![Imagem de Fundo](imagens/plano-de-fundo-para-chamadas-de-zoom-com-estante)
 
 
 ### Luz apagada:
